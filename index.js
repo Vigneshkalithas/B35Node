@@ -8,7 +8,9 @@ const mongodb = require('mongodb')  //import mongodb
 
 const mongoClient = mongodb.MongoClient;  //declare mongoClient
 
-const URL = "mongodb://localhost:27017";  //declare URL
+const URL = process.env.DB;  
+
+const dotenv = require('dotenv').config()  //import dotenv
 
 app.use(express.json());  //middle were
 
@@ -190,4 +192,4 @@ app.delete('/students/:id' , async function(req,res){
 
 
 
-app.listen(4000)
+app.listen(process.env.PORT || 4000)
