@@ -15,7 +15,7 @@ const dotenv = require('dotenv').config()  //import dotenv
 app.use(express.json());  //middle were
 
 app.use(cors({
-    orgin : 'http://localhost:3000'
+    orgin : 'https://statuesque-begonia-bb5bcd.netlify.app/'
 }))
 
 
